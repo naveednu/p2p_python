@@ -1,26 +1,21 @@
-p2p_python
-==========
+#### p2p_python ####
 A simplistic P2P file-sharing system.
 
-Central Server
-=============
+#### Central Server ####
 It is the job of the central server to keep track of all active peers and files.
 
-File management
-=============
+#### File management ####
 A command line interface to upload files.
 Once a file has been uploaded, the server acts as a peer for that file
 till the time at least one other client has a complete copy of it.
 At upload time, each file is converted into shards, each with size SHARD SIZE.
 For each file it creates a P2P file object with
 
-Peer management
-=============
+#### Peer management ####
 The first time a peer runs, it sends a register request to the server.
 A client which has not sent a heartbeat for HEARTBEAT TIMEOUT is marked as killed 
 
-Peers
-=============
+#### Peers ####
 The server’s public key is hardcoded within each peer’s code.
 
 The first time a client starts up, it is registered with the server and locally store the artifacts returned by the server.
